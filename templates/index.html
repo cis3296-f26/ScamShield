@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>ScamShield</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="logo">
+            <h1>ScamShield ♡</h1>
+            <p>Spot the red flags before they catch you.</p>
+        </div>
+
+
+        <div class="card">
+
+            <form method="POST">
+
+                <label class="label">
+                    Paste a suspicious message:
+                </label>
+
+                <textarea
+                    name="message"
+                    placeholder="Paste an email, text, or job offer here..."
+                    required>{{ message }}</textarea>
+
+                <button type="submit">
+                    Analyze Message ✦
+                </button>
+
+            </form>
+
+
+            {% if risk_level %}
+
+            <div class="result">
+
+                <h2>
+                    Risk Level:
+                    <span class="risk {{ risk_level }}">
+                        {{ risk_level }}
+                    </span>
+                </h2>
+
+                {% if warnings %}
+
+                    <h3>Things that look suspicious:</h3>
+
+                    <ul>
+                        {% for warning in warnings %}
+                            <li>{{ warning }}</li>
+                        {% endfor %}
+                    </ul>
+
+                {% else %}
+
+                    <p>
+                        No common scam warning signs were detected.
+                    </p>
+
+                {% endif %}
+
+            </div>
+
+            {% endif %}
+
+        </div>
+
+
+        <div class="footer">
+            ScamShield • Think before you click ♡
+        </div>
+
+    </div>
+
+</body>
+</html>
