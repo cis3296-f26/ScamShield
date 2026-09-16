@@ -56,10 +56,10 @@ ScamShield is a web application that identifies common warning signs in suspicio
 
 ## How It Works
 
-The user pastes a suspicious message into the website and clicks "Analyze Message." ScamShield checks the message for common scam warning signs, such as urgent language, requests for personal information, unusual payment requests, and suspicious links.
+The user pastes a suspicious message into the website and clicks "Analyze Message." ScamShield checks the message for common warning signs, such as urgent language, suspicious links, requests for personal information, and unusual payment requests.
 
-Based on the warning signs found, the application returns a LOW, MEDIUM, or HIGH risk level and explains what made the message suspicious.
+Based on the warning signs detected, the application returns a LOW, MEDIUM, or HIGH risk level and explains what made the message suspicious.
 
 ## Proof of Concept
 
-This version is a proof of concept for CIS 3296 Software Design. It demonstrates the basic message analysis and risk detection features planned for ScamShield.
+The current version of ScamShield uses rule-based detection to identify common scam patterns in messages. It shows that the main features of the project can work together in a simple web application. More warning signs and advanced detection methods can be added as the project develops.
