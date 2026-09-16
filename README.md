@@ -47,11 +47,12 @@ ScamShield is a web application that identifies common warning signs in suspicio
 
 6. Start the application:
 
-   python3 app.py
+   flask --app app run --port 5001
 
 7. Open the following address in a web browser:
 
-   http://127.0.0.1:5000
+   http://127.0.0.1:5001
+
 
 ## How It Works
 
